@@ -64,7 +64,6 @@ const getWeather = async (cep) => {
         }
     }
     
-    console.log(coordinates);
     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${coordinates.lat}&longitude=${coordinates.lng}&hourly=temperature_2m&current=temperature_2m`)
         .then(response => response.json())
         .then(data => {
