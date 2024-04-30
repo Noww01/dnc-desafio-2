@@ -74,7 +74,7 @@ const getWeather = async (cep) => {
         });
 }
 
-const getCoordinates = async (cep) => {0
+const getCoordinates = async (cep) => {
     let result;
 
     await fetch(`https://cep.awesomeapi.com.br/json/${cep}`)
