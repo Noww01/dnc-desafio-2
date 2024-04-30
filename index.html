@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>DncWeather</title>
+</head>
+<body>
+    <div id="header">
+        <h1>DncWeather</h1>
+        <ul>
+            <li>Endereços</li>
+            <li>Previsão do Tempo</li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="about">
+            <h1>Descubra Mais com Precisão: <br>   
+            Previsões do Tempo e endereços <br>
+            em tempo real.</h1>
+            <img src="./icons/weather1.svg" alt="ERROR">
+        </div>
+    
+        <div id="form">
+            <form>
+                <p>Primeiro Nome:</p><br>
+                <input type="text" placeholder="Insira seu primeiro nome:"><br>
+
+                <p>E-mail:</p><br>
+                <input type="email" placeholder="Insira seu e-mail:"><br>
+                
+                <p>Digite o CEP:</p><br>
+                <input id="cep" type="tel" placeholder="Insira o CEP"><br>
+
+                <p>Digite a latitude e longitude para saber a previsão:</p><br>
+                <div id="coordinates">
+                    <input id="lat" class="coordinates-input" type="number" placeholder="Latitude"> 
+                    <input id="lng" class="coordinates-input" type="number" placeholder="Longitude">
+                </div>
+                <br><br>
+                
+                <input type="button" id="button" onclick="submitCep()" value="Acessar">
+            </form>
+        </div>
+
+        <div id="result-container">
+            <div>
+                <h1>Resultado da busca por CEP:</h1>
+                <img src="./icons/location.svg" alt="ERROR">
+            </div>
+    
+            <div id="result">
+                <ul>
+                    <li>Logradouro/Nome</li>
+                    <li>Bairro/Distrito</li>
+                    <li>Localidade/UF</li>
+                </ul>
+    
+                <ul>
+                    <li id="logradouro"></li>
+                    <li id="bairro"></li>
+                    <li id="uf"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="weatherDiv">
+            <div>
+                <h1>Previsão do tempo na região:</h1>
+                <img src="./icons/weather2.svg" alt="ERROR">
+            </div>
+
+            <p id="weather">Previsão de tempo de acordo com a região: </p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Termos de Uso | Política de Privacidade</p>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
